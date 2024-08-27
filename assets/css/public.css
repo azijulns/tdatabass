@@ -1,0 +1,541 @@
+:root {
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --success-color: #27d0ff;
+    --global-font: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+figure {
+    margin: 0;
+}
+
+img,
+svg {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex-start-spb {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* ************************** */
+/*         Main Style         */
+/* ************************** */
+.services {
+    padding: 100px 0;
+}
+
+/* ********** Step 01 ********** */
+.step__title {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+    color: var(--dark-color);
+    max-width: 580px;
+    margin: 0 auto;
+}
+
+.services__form-fields {
+    width: 580px;
+    margin: 40px auto 0;
+}
+
+.services__form-field:not(:last-child) {
+    margin: 0 0 20px;
+}
+
+.services__form-field p{
+    font-size: 14px;
+}
+
+.services__form-field label {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--dark-color);
+    font-family: var(--global-font);
+}
+
+.services__form-field input:not([type="radio"]),
+.services__form-field select {
+    font-size: 14px !important;
+    line-height: 1.0;
+    font-weight: 500;
+    font-family: var(--global-font);
+    color: var(--dark-color);
+    width: 100%;
+    padding: 10px 10px;
+    border: 1px solid #c1c1c1 !important;
+    border-radius: 0 !important;
+    margin: 5px 0 0;
+}
+
+/* ********** Service 1 ********** */
+/* ********** Service 2 ********** */
+.service {
+    margin-top: 80px;
+}
+
+.service-1,
+.service-2 {
+    display: none;
+}
+
+.service-1 .price-plans {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-1 .price-plan {
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px #00000018;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-1 .price-plan:hover {
+    box-shadow: 0 15px 20px #00000023;
+}
+
+.price-plan__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.price-plan__title {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+
+.price-plan__para {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--dark-color);
+    margin: 0 0 20px;
+}
+
+.price-plan__price {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    margin: 0;
+}
+
+.price-plan__price p {
+    margin: 10px 0 0;
+}
+
+/* Input Range */
+.step__meter-count {
+    margin: 50px auto 0;
+}
+
+.custom-range-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+/* .services__form-field */
+.step__meter-count .services__form-field .custom-range-input {
+    --c: orange; /* active color */
+    --g: 5px; /* the gap */
+    --l: 0px; /* line thickness*/
+    --s: 40px; /* thumb size*/
+
+    /* width: 400px; */
+    height: var(--s); /* needed for Firefox*/
+    --_c: color-mix(in srgb, var(--c), #000 var(--p, 0%));
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    cursor: pointer;
+}
+
+.custom-range-input:focus-visible,
+.custom-range-input:hover {
+    --p: 25%;
+}
+
+.custom-range-input:active,
+.custom-range-input:focus-visible {
+    --_b: var(--s);
+}
+
+.meter-field {
+    text-align: center;
+    margin: 50px 0 0;
+}
+
+.services__form-field.meter-field input {
+    width: 300px;
+    margin: 0 10px;
+}
+
+.step__calculation {
+    border-top: 2px solid #00000077;
+    max-width: 800px;
+    margin: 50px auto 0;
+    padding: 20px;
+}
+
+.step__calculation-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px;
+    gap: 20px;
+}
+
+.step__calculation-entry span {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: var(--dark-color);
+}
+
+.step__calculation-entry span:first-child {
+    flex: 1;
+}
+
+.total-calculation {
+    font-weight: 700;
+}
+
+.total-calculation span {
+    font-size: 18px;
+}
+
+.total-calculation span:last-child {
+    text-decoration: underline;
+    color: #27d0ff;
+}
+
+.final-calculation span:last-child {
+    text-decoration: underline;
+}
+
+.step__submit {
+    margin: 30px auto 0;
+    display: block;
+    width: max-content;
+    color: var(--light-color);
+    background-color: var(--success-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    min-width: 180px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-family: var(--global-font);
+    transition: 0.3s;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.step__submit:hover {
+    opacity: 1;
+}
+
+/* ********** Service 3 ********* */
+.service-3 {
+    display: none;
+}
+
+.srv-price-cards {
+    margin-top: 60px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1200px) and (min-width: 768px){
+    .srv-price-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px){
+    .srv-price-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.srv-price-card {
+    padding: 30px;
+    background-color: var(--light-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #00000034;
+    flex: 1;
+}
+
+.srv-price-card .srv-price-card__title {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 600;
+    font-family: var(--global-font);
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #00000027;
+}
+
+.srv-price-card .price-card__amount {
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #7699b9;
+    margin: 0 0 20px;
+}
+
+.srv-price-card .price-card__amount span {
+    color: var(--dark-color);
+}
+
+.srv-price-card .price-card__offer-text,
+.srv-price-card .price-card__offer-time {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--dark-color);
+    margin: 0 0 15px;
+}
+
+.srv-price-card .srv-price-card__feature {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+.srv-price-card .srv-price-card__feature li {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: var(--global-font);
+    margin: 0 0 10px;
+}
+
+.srv-price-card__feature .active {
+    list-style: url(../imgs/tick.svg);
+}
+
+.srv-price-card__feature .deactive {
+    list-style: url(../imgs/no-entry-sign.svg);
+}
+
+.services__form-field .price-card__submit {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--light-color);
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--success-color);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.price-card__submit-input {
+    display: none;
+}
+
+.services__form-field .price-card__submit:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1200px) {
+    .step__price-plans.price-plans {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .price-plan {
+        min-width: 305px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 991px) {
+    .services {
+        padding: 80px 0;
+    }
+
+    .step__title {
+        font-size: 32px;
+    }
+
+    .service-1 .price-plan {
+        padding: 20px;
+    }
+
+    .price-plan__para,
+    .total-calculation span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .services__form-fields {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .step__title {
+        font-size: 28px;
+    }
+
+    .srv-price-card__title,
+    .price-card__amount {
+        font-size: 27px;
+    }
+
+    .services__form-field.meter-field input {
+        max-width: 200px;
+    }
+
+    .services__form-field label,
+    .services__form-field input:not([type="radio"]),
+    .services__form-field select,
+    .step__submit,
+    .price-plan__price,
+    .step__calculation-entry span,
+    .price-card__offer-text,
+    .price-card__offer-time,
+    .srv-price-card__feature li,
+    .services__form-field .price-card__submit {
+        font-size: 14px;
+    }
+}
+
+#services__form .service input[type="range"] {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    /*  overflow: hidden;  remove this line*/
+    /* box-shadow: 0 0 0 10px rgba(46, 214, 60, 0.192); */
+    /* New additions */
+    height: 6px;
+    background: #ccc;
+    padding: inherit;
+    border: none;
+}
+
+/* Thumb: webkit */
+#services__form .service input[type="range"]::-webkit-slider-thumb {
+    /* removing default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 15px;
+    width: 15px;
+    background-color: #27d0ff;
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+    border-radius: 50%;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+/* Thumb: Firefox */
+#services__form .service input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #27d0ff;
+    border-radius: 50%;
+    border: none;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+/* Hover, active & focus Thumb: Webkit */
+
+#services__form .service input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+#services__form .service input[type="range"]:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+#services__form .service input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+/* Hover, active & focus Thumb: Firfox */
+
+#services__form .service input[type="range"]::-moz-range-thumb:hover {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+#services__form .service input[type="range"]:active::-moz-range-thumb {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+#services__form .service input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 10px rgb(46 180 214 / 40%);
+}
+
+#services__form .service .range {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 4rem;
+    width: 80%;
+    background: #fff;
+    padding: 0px 10px;
+}
+
+#services__form .service .value {
+    font-size: 26px;
+    width: 50px;
+    text-align: center;
+}
